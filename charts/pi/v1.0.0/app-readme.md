@@ -1,3 +1,3 @@
-# Calculate Pi
+# calculatepi
 
 Sample application to calculate Pi
