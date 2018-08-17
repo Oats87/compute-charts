@@ -1,0 +1,8 @@
+questions:
+- variable: places
+  default: "2000"
+  description: " Places to calculate Pi to"
+  label: "Places to Calculate Pi To"
+  type: string
+  group: "Configuration"
+  required: true

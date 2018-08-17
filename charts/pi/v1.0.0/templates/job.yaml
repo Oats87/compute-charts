@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ template "fullname" . }}
+spec:
+  template:
+    spec:
+      containers:
+      - name: {{ template "fullname" . }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi({{ .Values.places }})"]
+        imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
+      restartPolicy: Never
+  backoffLimit: 4

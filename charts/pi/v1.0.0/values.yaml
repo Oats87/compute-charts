@@ -1,0 +1,6 @@
+image:
+  repository: perl
+  tag: latest
+  pullPolicy: Always
+
+places: 2000
